@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background: linear-gradient(122.01deg, #0F172A 0%, #1E293B 100%);
+    min-height: 100vh;
+    padding-top: 44px;
+    padding-left: 44px;
+    width: 100%;
+}
+
+.autocomplete-wrapper {
+    display: flex;
+    flex-direction: column;
+    /*gap: 12px;*/
+    width: 400px;
+}
+
+.input-label {
+    font-family: Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #94A3B8;
+    margin-bottom: 12px;
+}
+
+.input-autocomplete {
+    position: relative;
+}
+.autocomplete{
+    width: 400px;
+    /*height: 65px;*/
+    box-sizing: border-box;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 22px;
+    border-radius: 12px;
+    background: #1E293B;
+    border: 2px solid #475569;
+    box-shadow: 0px 10px 15px -3px #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14.6px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #F8FAFC;
+}
+
+.placeholder {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 17.6px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #64748B;
+
+    position: absolute;
+    top: 22px;
+    left: 20px;
+}
+
+.input-autocomplete-options-list {
+    width: 400px;
+    max-height: 240px;
+    border-radius: 12px;
+    border: 2px solid #475569;
+    padding: 8px;
+    background: #1E293B;
+    box-shadow: 0px 4px 16px 0px #00000026;
+    backdrop-filter: blur(10px);
+    display: none;
+    list-style: none;
+    gap: 4px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.input-autocomplete-options-list.open {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-autocomplete-option {
+    padding-top: 15.5px;
+    padding-right: 16px;
+    padding-bottom: 15.5px;
+    padding-left: 19px;
+    border-radius: 8px;
+
+    font-family: Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #F8FAFC;
+    /*background-color: #334155;*/
+}
+
+.autocomplete:focus {
+    outline: none;
+    border: 2px solid #06D6A0;
+    box-shadow: 0px 10px 15px -3px #00000040, 0px 0px 0px 3px #06D6A026;
+    backdrop-filter: blur(10px);
+    background-color: #334155;
+}
+
+.input-autocomplete-option:hover, .input-autocomplete-option.active {
+    background: #475569;
+    color: #06D6A0;
+}
